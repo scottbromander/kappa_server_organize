@@ -11,7 +11,19 @@
   </head>
   <body>
       <div ng-controller="HomeController">
-        
+          <form>
+              <select ng-model="pet_value">
+                  <option value="cat">CAT</option>
+                  <option value="dog">DOG</option>
+                  <option value="bird">BIRD</option>
+                  <option value="zebra">ZEBRA</option>
+                  <option value="bunny">BUNNY</option>
+                  <option >AESOP</option>
+                  <option >ZOMBIE PIG</option>
+              </select>
+          </form>
+
+          <button ng-click="clickMe(pet_value)">CLICK ME</button>
       </div>
   </body>
 </html>

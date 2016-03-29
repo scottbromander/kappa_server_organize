@@ -3,6 +3,7 @@ var myApp = angular.module("myApp", []);
 myApp.controller("HomeController", ["$scope", "$http", function($scope, $http){
     console.log("Totally loads");
 
+
     var person = {
         name: "Biz",
         location: "Bloomington"
@@ -18,5 +19,9 @@ myApp.controller("HomeController", ["$scope", "$http", function($scope, $http){
         $http.get("/people").then(function(response){
             console.log("HERE! ", response);
         });
+    };
+
+    $scope.clickMe = function(value){
+        console.log(value);
     };
 }]);
